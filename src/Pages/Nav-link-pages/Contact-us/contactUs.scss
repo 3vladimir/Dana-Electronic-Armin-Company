@@ -1,0 +1,51 @@
+.contactUsOuterContainer {
+  padding: 2em 0 15em 0;
+  background-color: whitesmoke;
+}
+
+.contactUsInnerContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contactUsTitle {
+  padding-bottom: 1em;
+}
+
+.contactUsitems {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+  padding-top: 1em;
+}
+
+.contactUsIcons {
+  width: 2.5em;
+  border-radius: 70px;
+}
+
+.contactUsNumbers {
+  font-family: "Times New Roman";
+}
+
+@media screen and (max-width: 1000px) {
+  .contactUsInnerContainer,
+  .contactUsNumbers {
+    font-size: 0.7em;
+  }
+  .contactUsIcons {
+    width: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contactUsInnerContainer,
+  .contactUsNumbers {
+    font-size: 0.4em;
+  }
+  .contactUsIcons {
+    width: 1em;
+  }
+}

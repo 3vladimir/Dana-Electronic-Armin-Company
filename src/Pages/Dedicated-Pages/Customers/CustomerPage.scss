@@ -1,0 +1,54 @@
+.customerPageBackground {
+  position: fixed;
+  opacity: 0.1;
+  width: 100%;
+}
+.customerPageBackgroundImage {
+  width: 100%;
+}
+
+.cusomerPageInnerContainer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 8em 0 15em 0;
+}
+
+.customersPersonalInfoItems {
+  padding-top: 1em;
+}
+
+//responsive//
+
+@media screen and (max-width: 1000px) {
+  .cusomerPageInnerContainer {
+    padding: 5em 0 15em 0;
+  }
+  .customerPageFirstTitle {
+    font-size: 1.2em;
+  }
+  .customerPageSecondTitle {
+    font-size: 1em;
+  }
+  .customersPersonalInfoItems {
+    padding-top: 0.7em;
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cusomerPageInnerContainer {
+    padding: 3em 0 8em 0;
+  }
+  .customerPageFirstTitle {
+    font-size: 0.8em;
+  }
+  .customerPageSecondTitle {
+    font-size: 0.6em;
+  }
+  .customersPersonalInfoItems {
+    padding-top: 0.4em;
+    font-size: 0.4em;
+  }
+}
+
+

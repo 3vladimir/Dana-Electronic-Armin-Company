@@ -1,0 +1,143 @@
+.banner {
+  background-image: url(../../Images/bannerImage.jpg);
+  background-size: cover;
+  height: 50em;
+}
+
+.bannerTitle {
+  font-family: shabnam-bold;  
+  width: 35%;
+  margin: 0;
+  color: white;
+  font-size: 6em;
+  transform: translate(0, 60px);
+  text-align: center;
+}
+
+.mainInnerContainer {
+  width: 70%;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  padding: 10em 0;
+}
+
+.mainBoxesOuterContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mainBoxes {
+  margin: 0;
+  width: 15%;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  padding: 6em;
+  background: linear-gradient(
+    337deg,
+    rgba(224, 182, 36, 0.7472922274378502) 0%,
+    rgba(136, 70, 51, 1) 55%
+  );
+  box-shadow: 30px 34px 39px -7px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 30px 34px 39px -7px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 30px 34px 39px -7px rgba(0, 0, 0, 0.74);
+
+  &:hover {
+    background: linear-gradient(
+      337deg,
+      rgba(224, 182, 36, 0.7472922274378502) 0%,
+      rgba(136, 30, 51, 1) 55%
+    );
+    .mainBoxesTitles {
+      color: orange;
+    }
+  }
+}
+
+.mainBoxesTitles {
+  font-size: 1.5em;
+}
+
+//media query//
+
+@media screen and (max-width: 1100px) {
+  .banner {
+    height: 35em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mainInnerContainer {
+    padding: 6em 0;
+  }
+  .banner {
+    height: 30em;
+  }
+  .bannerTitle {
+    font-size: 4em;
+    transform: translate(0, 40px);
+  }
+  .mainBoxes {
+    padding: 4em;
+    box-shadow: 22px 25px 39px -7px rgba(0, 0, 0, 0.74);
+  }
+  .mainBoxesTitles {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .banner {
+    height: 26em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mainInnerContainer {
+    padding: 5em 0;
+  }
+  .banner {
+    height: 25em;
+  }
+  .mainBoxes {
+    padding: 3em;
+  }
+  .mainBoxesTitles {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .banner {
+    height: 15em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner {
+    height: 10em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mainInnerContainer {
+    padding: 3em 0;
+  }
+  .banner {
+    height: 13em;
+  }
+  .bannerTitle {
+    font-size: 1.5em;
+    transform: translate(0, 20px);
+  }
+  .mainBoxes {
+    padding: 1.7em;
+    box-shadow: 10px 15px 39px -7px rgba(0, 0, 0, 0.74);
+  }
+  .mainBoxesTitles {
+    font-size: 0.5em;
+  }
+}

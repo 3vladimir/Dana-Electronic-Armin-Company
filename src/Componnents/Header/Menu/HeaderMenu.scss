@@ -1,0 +1,73 @@
+.navDashboardOuterContainer {
+  padding-top: 1em;
+  cursor: auto;
+  z-index: 2;
+  position: absolute;
+}
+
+.navDashboardInnerContainer {
+  padding: 15px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.navDashboardList {
+  padding: 0;
+}
+
+.navDashbordlistItems {
+  list-style-type: none;
+  color: black;
+  padding: 8px 0;
+  &:hover {
+    cursor: pointer;
+    color: rgb(22, 204, 22);
+  }
+}
+
+          //responsive//
+
+@media screen and (max-width: 1000px) {
+  .navDashboardInnerContainer {
+    padding: 11px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navDashboardInnerContainer {
+    padding: 10px;
+  }
+  .navDashbordlistItems {
+    padding: 6px 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navDashboardInnerContainer {
+    padding: 9px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navDashboardInnerContainer {
+    padding: 8px;
+  }
+  .navDashbordlistItems {
+    padding: 5px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navDashboardInnerContainer {
+    padding: 7px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navDashboardInnerContainer {
+    padding: 6px;
+  }
+  .navDashbordlistItems {
+    padding: 3px 0;
+  }
+}

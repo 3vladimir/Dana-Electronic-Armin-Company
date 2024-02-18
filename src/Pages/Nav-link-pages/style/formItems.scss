@@ -1,0 +1,72 @@
+.formOuterContainner {
+  text-align: center;
+  padding: 3em 0;
+}
+
+.formInnerContainer {
+  box-shadow: -1px 1px 39px 9px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 1px 39px 9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 39px 9px rgba(0, 0, 0, 0.75);
+  margin: 0 auto;
+  background-color: darkslategray;
+  color: white;
+  padding: 2em;
+  border-radius: 15px;
+}
+
+.formInputs {
+  font-family: inherit;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.inputError{
+  outline: 2px solid red;
+}
+
+//responsive//
+@media screen and (max-width: 1000px) {
+  .formFirstTitle {
+    font-size: 1.2em;
+  }
+  .formSecondTitle {
+    font-size: 1em;
+  }
+  .formItemsLabel {
+    font-size: 0.8em;
+  }
+  .formInputs {
+    padding: 0.7em;
+    font-size: 0.8em;
+  }
+  .formInputs::placeholder {
+    font-size: 0.7em;
+  }
+  .formSubmitButtonText,
+  .formAlertText {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .formFirstTitle {
+    font-size: 1em;
+  }
+  .formSecondTitle {
+    font-size: 0.8em;
+  }
+  .formItemsLabel {
+    font-size: 0.6em;
+  }
+  .formInputs {
+    font-size: 0.6em;
+    padding: 0.6em;
+  }
+  .formInputs::placeholder {
+    font-size: 0.5em;
+  }
+  .formSubmitButtonText,
+  .formAlertText {
+    font-size: 0.5em;
+  }
+}

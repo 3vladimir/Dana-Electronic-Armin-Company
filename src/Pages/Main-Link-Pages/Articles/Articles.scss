@@ -1,0 +1,18 @@
+.articlesOuterContainer {
+  padding: 5em 0 20em 0;
+}
+.articlesTitles {
+  font-family: iranSans;
+}
+
+@media screen and (max-width: 1000px) {
+  .articlesTitles {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .articlesTitles {
+    font-size: 0.4em;
+  }
+}

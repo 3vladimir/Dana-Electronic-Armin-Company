@@ -1,0 +1,1 @@
+This website is created for a company that installs industrial automations.It has a sign-in and sign-up form witch handled by a local starage.All pages are designed based on responsive web designe.

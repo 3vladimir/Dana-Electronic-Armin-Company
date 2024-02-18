@@ -1,0 +1,69 @@
+.signUpInnerContainer {
+  width: 50%;
+}
+
+.signUpItemsList {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1em;
+}
+
+.signUpItems {
+  padding-top: 2em;
+  flex: 0 0 50%;
+  text-align: right;
+}
+
+.signUpItemsInput {
+  width: 85%;
+}
+
+.signUpTextarea {
+  width: 80%;
+  height: 10em;
+  padding: 1em;
+  font-family: inherit;
+  font-size: 0.8em;
+  border-radius: 2px;
+}
+
+.signUpItemsLabelContainer {
+  padding: 0 5px 5px 0;
+}
+
+.signUpItemsSelect {
+  width: 70%;
+  padding: 1em;
+  font-family: inherit;
+}
+
+//responsive//
+
+@media screen and (max-width: 1000px) {
+  .signUpItemsList {
+    display: block;
+  }
+  .signUpItems {
+    padding-top: 0.7em;
+  }
+  .signUpItemsSelect {
+    font-size: 0.8em;
+  }
+  .signUpTextarea {
+    height: 5em;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .signUpItems {
+    padding-top: 0.5em;
+  }
+  .signUpItemsSelect {
+    font-size: 0.5em;
+  }
+  .signUpTextarea {
+    height: 3em;
+    width: 40%;
+  }
+}
