@@ -1,5 +1,8 @@
+.signInOuterContainer {
+  margin-top: 5em;
+}
 .signInInnerContainer {
-  width: 40%;
+  width: 30%;
 }
 
 .signInSecondTitle {
@@ -11,7 +14,6 @@
   padding-bottom: 2em;
   display: flex;
   justify-content: space-between;
-  width: 80%;
   margin: 0 auto;
 }
 
@@ -21,17 +23,19 @@
 
 @media screen and (max-width: 1000px) {
   .signInItems {
-    width: 100%;
     padding-bottom: 1em;
+  }
+  .signInItems {
+    display: block;
+  }
+  .signInItemsInputs {
+    width: 90%;
+    margin-top: 5px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .signInItems {
-    display: block;
     padding-bottom: 0.5em;
-  }
-  .signInItemsInputs {
-    margin-top: 5px;
   }
 }

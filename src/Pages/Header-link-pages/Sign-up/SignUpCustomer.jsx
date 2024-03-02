@@ -204,7 +204,7 @@ function Main() {
       <div className="formOuterContainner">
         <div className="formInnerContainer signUpInnerContainer">
           <main>
-            <img width={"15%"} src={logo} alt="logo" />
+            <img className="formLogo" src={logo} alt="logo" />
             <h1 className="formFirstTitle">بخش مشتریان</h1>
             <h2 className="formSecondTitle">ایجاد حساب کاربری</h2>
             <form onSubmit={handleSubmit}>

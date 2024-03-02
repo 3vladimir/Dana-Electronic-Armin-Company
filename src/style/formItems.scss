@@ -1,6 +1,6 @@
 .formOuterContainner {
   text-align: center;
-  padding: 3em 0;
+  margin: 3em 0;
 }
 
 .formInnerContainer {
@@ -14,13 +14,17 @@
   border-radius: 15px;
 }
 
+.formLogo {
+  width: 20%;
+}
+
 .formInputs {
   font-family: inherit;
   border-radius: 5px;
   padding: 1em;
 }
 
-.inputError{
+.inputError {
   outline: 2px solid red;
 }
 
@@ -31,6 +35,9 @@
   }
   .formSecondTitle {
     font-size: 1em;
+  }
+  .formLogo {
+    width: 25%;
   }
   .formItemsLabel {
     font-size: 0.8em;
@@ -50,10 +57,13 @@
 
 @media screen and (max-width: 500px) {
   .formFirstTitle {
-    font-size: 1em;
+    font-size: 0.8em;
   }
   .formSecondTitle {
-    font-size: 0.8em;
+    font-size: 0.7em;
+  }
+  .formLogo {
+    width: 30%;
   }
   .formItemsLabel {
     font-size: 0.6em;

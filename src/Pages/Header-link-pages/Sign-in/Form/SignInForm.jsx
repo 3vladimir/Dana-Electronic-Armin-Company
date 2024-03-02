@@ -3,12 +3,12 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import * as React from "react";
-import "./SignInForm.scss";
 import '../../../../style/formItems.scss';
+import "./SignInForm.scss";
 import Alert from "@mui/material/Alert";
 import logo from "../../../../Images/logo.png";
 import SubmitButton from '../../../../Componnents/Button/SubmitButton'
-
+  
 function SignInForm({ title, nextPageAddress, validUsersList, userType }) {
   const [alert, setAlert] = React.useState(false);
   function handleOpenAlert() {
@@ -46,10 +46,10 @@ function SignInForm({ title, nextPageAddress, validUsersList, userType }) {
   }
   return (
     <>
-      <div className="formOuterContainner">
+      <div className="formOuterContainner signInOuterContainer">
         <div className="formInnerContainer signInInnerContainer">
           <main>
-            <img width={"15%"} src={logo} alt="logo" />
+            <img className="formLogo"src={logo} alt="logo" />
             <h1 className="formFirstTitle">{title}</h1>
             <h2 className="formSecondTitle signInSecondTitle">
               ورود به حساب کاربری
