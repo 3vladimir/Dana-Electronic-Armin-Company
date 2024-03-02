@@ -3,7 +3,6 @@
 /* eslint-disable no-unused-vars */
 import * as React from "react";
 import "./HomePage.scss";
-import Footer from '../../Componnents/Footer/Footer'
 import { HeaderAndFooterColumnStyled } from "../../Componnents/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
 import { Link } from "react-router-dom";
 import { handleLocalStoarege } from "./Local-storage/HandleLocalStorage";
@@ -52,12 +51,9 @@ function App() {
     <>
     
       <Title>صفحه اصلی</Title>
-      {/* <HeaderAndFooterColumnStyled> */}
-      {/* <Header/> */}
+      <HeaderAndFooterColumnStyled>
         <Main />
-        <Footer></Footer>
-        {/* <Footer/> */}
-      {/* </HeaderAndFooterColumnStyled> */}
+      </HeaderAndFooterColumnStyled>
     </>
   );
 }
