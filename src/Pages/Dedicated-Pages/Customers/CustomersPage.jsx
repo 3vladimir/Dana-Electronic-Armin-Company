@@ -2,12 +2,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import * as React from "react";
-import Header from "../../../Componnents/Header/Header";
-import Footer from "../../../Componnents/Footer/Footer";
+import { HeaderAndFooterColumnStyled } from "../../../Componnents/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
 import "./CustomerPage.scss";
 import backgroundImage from "../../../Images/customerPageBackgound.jpg";
-import Title from '../../../Componnents/Title/Title'
-
+import Title from "../../../Componnents/Title/Title";
 
 function Main() {
   const currentCustomerPersonalInformations = window.localStorage.getItem(
@@ -65,14 +63,10 @@ function Main() {
 function App() {
   return (
     <>
-    <Title>
-      بخش مشتریان
-    </Title>
-      <Header />
-      <Main />
-      <div style={{ isolation: "isolate" }}>
-        <Footer />
-      </div>
+      <Title>بخش مشتریان</Title>
+      <HeaderAndFooterColumnStyled>
+        <Main />
+      </HeaderAndFooterColumnStyled>
     </>
   );
 }

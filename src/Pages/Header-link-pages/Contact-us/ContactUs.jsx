@@ -2,8 +2,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import * as React from "react";
-import Header from "../../../Componnents/Header/Header";
-import Footer from "../../../Componnents/Footer/Footer";
+import { HeaderAndFooterColumnStyled } from "../../../Componnents/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
 import "./contactUs.scss";
 import telephone from "../../../Images/Icons/telephone.jpg";
 import mobile from "../../../Images/Icons/mobile.png";
@@ -73,9 +72,9 @@ function App() {
     <Title>
       تماس با ما
     </Title>
-      <Header />
-      <Main />
-      <Footer />
+    <HeaderAndFooterColumnStyled>
+        <Main />
+      </HeaderAndFooterColumnStyled>
     </>
   );
 }

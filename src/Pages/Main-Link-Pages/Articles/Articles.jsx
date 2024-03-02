@@ -3,8 +3,7 @@
 /* eslint-disable no-unused-vars */
 import * as React from "react";
 import { Link } from "react-router-dom";
-import Header from "../../../Componnents/Header/Header";
-import Footer from "../../../Componnents/Footer/Footer";
+import { HeaderAndFooterColumnStyled } from "../../../Componnents/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
 import "./Articles.scss";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -131,9 +130,9 @@ function App() {
   return (
     <>
       <Title>مقالات</Title>
-      <Header />
-      <Main />
-      <Footer />
+      <HeaderAndFooterColumnStyled>
+        <Main />
+      </HeaderAndFooterColumnStyled>
     </>
   );
 }

@@ -3,8 +3,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import * as React from "react";
-import Header from "../../../Componnents/Header/Header";
-import Footer from "../../../Componnents/Footer/Footer";
+import { HeaderAndFooterColumnStyled } from "../../../Componnents/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
 import Title  from '../../../Componnents/Title/Title' 
 
 function Main() {
@@ -25,9 +24,9 @@ function App() {
     <Title>
       محصولات
     </Title>
-      <Header />
-      <Main />
-      <Footer />
+    <HeaderAndFooterColumnStyled>
+        <Main />
+      </HeaderAndFooterColumnStyled>
     </>
   );
 }

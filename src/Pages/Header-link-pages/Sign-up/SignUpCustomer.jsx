@@ -4,15 +4,15 @@
 /* eslint-disable no-unused-vars */
 import * as React from "react";
 import "./SignUpCustomer.scss";
-import "../style/formItems.scss";
+import "../../../style/formItems.scss";
 import logo from "../../../Images/logo.png";
-import { Button } from "@mui/material";
 import uuid from "react-uuid";
-import axios from "axios";
 import FormHelperText from "@mui/material/FormHelperText";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
-import Title from '../../../Componnents/Title/Title'
+import Title from "../../../Componnents/Title/Title";
+import handleLocalStorage from "./Local-storage/handleLocalStorage";
+import SubmitButton from "../../../Componnents/Button/SubmitButton";
 
 function Main() {
   /*define refs*/
@@ -25,69 +25,62 @@ function Main() {
   const workDomainRef = React.useRef();
   const extraDescriptionsRef = React.useRef();
 
-  /*local storage*/
-  function handleLocalStorage(currentCustomerPersonalInformations) {
-    window.localStorage.setItem(
-      "currentCustomerPersonalInformations",
-      JSON.stringify(currentCustomerPersonalInformations)
-    );
-    let customersPersonalInformationsDatabse = window.localStorage.getItem(
-      "customersPersonalInformationsDatabse"
-    );
-    customersPersonalInformationsDatabse = JSON.parse(
-      customersPersonalInformationsDatabse
-    );
-    customersPersonalInformationsDatabse.push(
-      currentCustomerPersonalInformations
-    );
-    window.localStorage.setItem(
-      "customersPersonalInformationsDatabse",
-      JSON.stringify(customersPersonalInformationsDatabse)
-    );
-  }
-
   /*Error*/
-  const [firstNameError, setFirstNameError] = React.useState(false);
+
+  const [error, setError] = React.useState({
+    firstName: false,
+    lastName: false,
+    phoneNumber: false,
+    city: false,
+    username: false,
+    password: false,
+  });
+
   function firstNameErrorOn() {
-    setFirstNameError(true);
+    setError({ firstName: true });
+  }
+  function firstNameErrorOff() {
+    setError({ firstName: false });
   }
 
-  const [lastNameError, setLastNameError] = React.useState(false);
   function lastNameErrorOn() {
-    setLastNameError(true);
+    setError({ lastName: true });
+  }
+  function lastNameErrorOff() {
+    setError({ lastName: false });
   }
 
-  const [phoneNumberError, setPhoneNumberError] = React.useState(false);
   function phoneNumberErrorOn() {
-    setPhoneNumberError(true);
+    setError({ phoneNumber: true });
   }
   function phoneNumberErrorOff() {
-    setPhoneNumberError(false);
+    setError({ phoneNumber: false });
   }
 
-  const [cityError, setCityError] = React.useState(false);
   function cityErrorOn() {
-    setCityError(true);
+    setError({ city: true });
+  }
+  function cityErrorOff() {
+    setError({ city: false });
   }
 
-  const [usernameError, setUsernameError] = React.useState(false);
   function usernameErrorOn() {
-    setUsernameError(true);
+    setError({ username: true });
   }
   function usernameErrorOff() {
-    setUsernameError(false);
+    setError({ username: false });
   }
 
-  const [passwordError, setPasswordError] = React.useState(false);
   function passwordErrorOn() {
-    setPasswordError(true);
+    setError({ password: true });
   }
   function passwordErrorOff() {
-    setPasswordError(false);
+    setError({ password: false });
   }
 
   /*handle inputs*/
   function handleFarsiInputs(inputRef, inputSetError) {
+    handleSnackbarStateClose();
     inputRef.current.classList.remove("inputError");
     const englishAlphabets = /[a-z,A-Z]/;
     const isKeyboardFarsi = englishAlphabets.test(inputRef.current.value);
@@ -100,26 +93,22 @@ function Main() {
   }
 
   function firstnameHandle() {
-    setFirstNameError(false);
-    handleSnackbarStateClose();
+    firstNameErrorOff();
     handleFarsiInputs(firstNameRef, firstNameErrorOn);
   }
 
   function lastNameHandle() {
-    setLastNameError(false);
-    handleSnackbarStateClose();
+    lastNameErrorOff();
     handleFarsiInputs(lastNameRef, lastNameErrorOn);
   }
 
   function cityHandle() {
-    setCityError(false);
-    handleSnackbarStateClose();
+    cityErrorOff();
     handleFarsiInputs(cityRef, cityErrorOn);
   }
 
   function phoneNumberHandle() {
     phoneNumberRef.current.classList.remove("inputError");
-    // phoneNumberErrorOff()
     const inputValidValues = /^\d{11}$/;
     const isInputValid = inputValidValues.test(phoneNumberRef.current.value);
     console.log(isInputValid);
@@ -181,7 +170,7 @@ function Main() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    if (phoneNumberError) {
+    if (error.phoneNumber) {
       return;
     }
 
@@ -233,11 +222,12 @@ function Main() {
                     id="signUpFirstName"
                     ref={firstNameRef}
                     className="formInputs signUpItemsInput"
+                    placeholder="علی"
                     required
                     onChange={firstnameHandle}
                   />
 
-                  {firstNameError ? <InputHelperText></InputHelperText> : null}
+                  {error.firstName ? <InputHelperText></InputHelperText> : null}
                 </li>
 
                 <li className="signUpItems">
@@ -253,11 +243,12 @@ function Main() {
                     id="signUpLastName"
                     ref={lastNameRef}
                     className="formInputs signUpItemsInput"
+                    placeholder="محمدی"
                     required
                     onChange={lastNameHandle}
                   />
 
-                  {lastNameError ? <InputHelperText></InputHelperText> : null}
+                  {error.lastName ? <InputHelperText></InputHelperText> : null}
                 </li>
                 <li className="signUpItems">
                   <div className="signUpItemsLabelContainer">
@@ -281,7 +272,7 @@ function Main() {
                     onChange={phoneNumberErrorOff}
                   />
 
-                  {phoneNumberError ? (
+                  {error.phoneNumber ? (
                     <InputHelperText>
                       شماره وارد شده صحیح نمیباشد
                     </InputHelperText>
@@ -300,12 +291,12 @@ function Main() {
                     id="signUpCity"
                     ref={cityRef}
                     className="formInputs signUpItemsInput"
-                    placeholder="مثال : نجف آباد"
+                    placeholder="تیران"
                     required
                     onChange={cityHandle}
                   />
 
-                  {cityError ? <InputHelperText></InputHelperText> : null}
+                  {error.city ? <InputHelperText></InputHelperText> : null}
                 </li>
                 <li className="signUpItems">
                   <div className="signUpItemsLabelContainer">
@@ -320,13 +311,13 @@ function Main() {
                     id="signUpUsername"
                     ref={usernameRef}
                     className="formInputs signUpItemsInput"
-                    placeholder="username"
+                    placeholder="ali"
                     required
                     onChange={usernameHandle}
                     style={{ direction: "ltr" }}
                   />
 
-                  {usernameError ? (
+                  {error.username ? (
                     <InputHelperText>
                       نام کاربری باید به انگلیسی وارد شود
                     </InputHelperText>
@@ -345,13 +336,13 @@ function Main() {
                     id="signUpPassword"
                     ref={passwordRef}
                     className="formInputs signUpItemsInput"
-                    placeholder="password"
+                    placeholder="ali1234"
                     required
                     onChange={passwordHandle}
                     style={{ direction: "ltr" }}
                   />
 
-                  {passwordError ? (
+                  {error.password ? (
                     <InputHelperText>
                       رمز عبور صرفا میتواند شامل a-z,0-9,_ باشد
                     </InputHelperText>
@@ -371,7 +362,7 @@ function Main() {
                     name="workDomain"
                     id="signUpworkDomain"
                     ref={workDomainRef}
-                    className="signUpItemsSelect"
+                    className="signUpItemsWorkDomain"
                   >
                     <option>گلخانه</option>
                     <option>کارخانه و صنایع</option>
@@ -399,14 +390,7 @@ function Main() {
                   ></textarea>
                 </li>
               </ul>
-              <Button
-                type="submit"
-                id="signUpSubmitButton"
-                variant="contained"
-                sx={{ width: "70%", fontSize: "large", fontWeight: "700" }}
-              >
-                <span className="formSubmitButtonText">ثبت نام</span>
-              </Button>
+              <SubmitButton content={"ثبت نام"} id={"signUpSubmitButton"} />
             </form>
           </main>
         </div>
@@ -434,9 +418,7 @@ function Main() {
 function App() {
   return (
     <>
-    <Title>
-      ثبت نام مشتریان
-    </Title>
+      <Title>ثبت نام مشتریان</Title>
       <Main />
     </>
   );

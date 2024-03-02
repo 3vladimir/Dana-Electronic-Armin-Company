@@ -4,10 +4,10 @@
 /* eslint-disable no-unused-vars */
 import * as React from "react";
 import "./SignInForm.scss";
-import "../../style/formItems.scss";
-import { Button } from "@mui/material";
+import '../../../../style/formItems.scss';
 import Alert from "@mui/material/Alert";
 import logo from "../../../../Images/logo.png";
+import SubmitButton from '../../../../Componnents/Button/SubmitButton'
 
 function SignInForm({ title, nextPageAddress, validUsersList, userType }) {
   const [alert, setAlert] = React.useState(false);
@@ -107,13 +107,9 @@ function SignInForm({ title, nextPageAddress, validUsersList, userType }) {
                   />
                 </li>
               </ul>
-              <Button
-                sx={{ width: "80%", fontSize: "large", fontWeight: "700" }}
-                type="submit"
-                variant="contained"
-              >
-                <span className="formSubmitButtonText">ورود</span>
-              </Button>
+              <SubmitButton
+              content={'ورود'}
+              id={'signInSubmitButton'}/>
             </form>
           </main>
         </div>

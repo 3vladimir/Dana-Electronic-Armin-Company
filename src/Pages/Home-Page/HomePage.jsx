@@ -3,8 +3,8 @@
 /* eslint-disable no-unused-vars */
 import * as React from "react";
 import "./HomePage.scss";
-import Header from "../../Componnents/Header/Header";
-import Footer from "../../Componnents/Footer/Footer";
+import Footer from '../../Componnents/Footer/Footer'
+import { HeaderAndFooterColumnStyled } from "../../Componnents/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
 import { Link } from "react-router-dom";
 import { handleLocalStoarege } from "./Local-storage/HandleLocalStorage";
 import Collapse from "@mui/material/Collapse";
@@ -50,10 +50,14 @@ function Main() {
 function App() {
   return (
     <>
+    
       <Title>صفحه اصلی</Title>
-      <Header />
-      <Main />
-      <Footer />
+      {/* <HeaderAndFooterColumnStyled> */}
+      {/* <Header/> */}
+        <Main />
+        <Footer></Footer>
+        {/* <Footer/> */}
+      {/* </HeaderAndFooterColumnStyled> */}
     </>
   );
 }

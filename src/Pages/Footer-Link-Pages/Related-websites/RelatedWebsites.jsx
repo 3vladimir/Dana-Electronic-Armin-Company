@@ -2,10 +2,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import * as React from "react";
-import Header from "../../../Componnents/Header/Header";
-import Footer from "../../../Componnents/Footer/Footer";
-import Title  from '../../../Componnents/Title/Title'
-
+import { HeaderAndFooterColumnStyled } from "../../../Componnents/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
+import Title from "../../../Componnents/Title/Title";
 
 function Main() {
   return (
@@ -22,12 +20,10 @@ function Main() {
 function App() {
   return (
     <>
-    <Title>
-      وبسایت های مرتبط
-    </Title>
-      <Header />
-      <Main />
-      <Footer />
+      <Title>وبسایت های مرتبط</Title>
+      <HeaderAndFooterColumnStyled>
+        <Main />
+      </HeaderAndFooterColumnStyled>
     </>
   );
 }

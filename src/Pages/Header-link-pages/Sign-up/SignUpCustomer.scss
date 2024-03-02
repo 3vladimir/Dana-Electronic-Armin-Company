@@ -19,8 +19,9 @@
 }
 
 .signUpTextarea {
-  width: 80%;
+  width: 85%;
   height: 10em;
+  border-radius: 5px;
   padding: 1em;
   font-family: inherit;
   font-size: 0.8em;
@@ -31,8 +32,9 @@
   padding: 0 5px 5px 0;
 }
 
-.signUpItemsSelect {
-  width: 70%;
+.signUpItemsWorkDomain {
+  width: 90%;
+  border-radius: 5px;
   padding: 1em;
   font-family: inherit;
 }
@@ -46,12 +48,16 @@
   .signUpItems {
     padding-top: 0.7em;
   }
-  .signUpItemsSelect {
+  .signUpItemsInput {
+    width: 95%;
+  }
+  
+  .signUpItemsWorkDomain {
+    width: 100%;
     font-size: 0.8em;
   }
   .signUpTextarea {
     height: 5em;
-    width: 60%;
   }
 }
 
@@ -59,11 +65,10 @@
   .signUpItems {
     padding-top: 0.5em;
   }
-  .signUpItemsSelect {
+  .signUpItemsWorkDomain {
     font-size: 0.5em;
   }
   .signUpTextarea {
     height: 3em;
-    width: 40%;
   }
 }

@@ -2,11 +2,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import * as React from "react";
-import { Link } from "react-router-dom";
-import Header from "../../../Componnents/Header/Header";
-import Footer from "../../../Componnents/Footer/Footer";
+import { HeaderAndFooterColumnStyled } from "../../../Componnents/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
 import "./AboutUs.scss";
-import Title from '../../../Componnents/Title/Title'
+import Title from "../../../Componnents/Title/Title";
 
 function Main() {
   return (
@@ -14,7 +12,7 @@ function Main() {
       <div className="aboutUsOuterContainer">
         <main>
           <div className="aboutUsInnerContainer">
-            <article> 
+            <article>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Distinctio sit, commodi eius quidem, expedita, vitae numquam
               doloribus rem magni nihil corrupti ipsa quas. Repellat omnis
@@ -38,12 +36,11 @@ function Main() {
 function App() {
   return (
     <>
-    <Title>
-      درباره ما
-    </Title>
-      <Header />
-      <Main />
-      <Footer />
+      <Title>درباره ما</Title>
+      <HeaderAndFooterColumnStyled>
+        <Main />
+      </HeaderAndFooterColumnStyled>
+     
     </>
   );
 }

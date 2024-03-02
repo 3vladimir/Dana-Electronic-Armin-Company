@@ -3,19 +3,15 @@
 /* eslint-disable no-unused-vars */
 import * as React from "react";
 import { Link } from "react-router-dom";
-import Header from "../../../Componnents/Header/Header";
-import Footer from "../../../Componnents/Footer/Footer";
-import Title  from '../../../Componnents/Title/Title'
-
+import { HeaderAndFooterColumnStyled } from "../../../Componnents/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
+import Title from "../../../Componnents/Title/Title";
 
 function Main() {
   return (
-    <>  
+    <>
       <div style={{ color: "red" }}>
         <main>
-          <h1>
-            بخش کاتالوگ ها
-          </h1>
+          <h1>بخش کاتالوگ ها</h1>
         </main>
       </div>
     </>
@@ -25,12 +21,10 @@ function Main() {
 function App() {
   return (
     <>
-    <Title>
-      کاتالوگ ها
-    </Title>
-      <Header />
-      <Main />
-      <Footer />
+      <Title>کاتالوگ ها</Title>
+      <HeaderAndFooterColumnStyled>
+        <Main />
+      </HeaderAndFooterColumnStyled>
     </>
   );
 }

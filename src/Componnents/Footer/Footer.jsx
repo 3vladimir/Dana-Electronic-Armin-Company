@@ -3,7 +3,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import * as React from "react";
+import * as React from "react"; 
 import "./Footer.scss";
 import brandIcon from "../../Images/logo.png";
 import eitaa from "../../Images/Icons/eitaa.png";

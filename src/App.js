@@ -2,12 +2,12 @@
 import * as React from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import HomePage from "./Pages/Home-Page/HomePage.jsx";
-import SignInManager from "./Pages/Nav-link-pages/Sign-in/SignInManager.jsx";
-import SignInAgents from "./Pages/Nav-link-pages/Sign-in/SignInAgents.jsx";
-import SignInCustomer from "./Pages/Nav-link-pages/Sign-in/SignInCustomer.jsx";
-import AboutUs from "./Pages/Nav-link-pages/About-us/AboutUs.jsx";
-import SignUpCustomer from "./Pages/Nav-link-pages/Sign-up/SignUpCustomer.jsx";
-import ContactUs from "./Pages/Nav-link-pages/Contact-us/ContactUs.jsx";
+import SignInManager from "./Pages/Header-link-pages/Sign-in/SignInManager.jsx";
+import SignInAgents from "./Pages/Header-link-pages/Sign-in/SignInAgents.jsx";
+import SignInCustomer from "./Pages/Header-link-pages/Sign-in/SignInCustomer.jsx";
+import AboutUs from "./Pages/Header-link-pages/About-us/AboutUs.jsx";
+import SignUpCustomer from "./Pages/Header-link-pages/Sign-up/SignUpCustomer.jsx";
+import ContactUs from "./Pages/Header-link-pages/Contact-us/ContactUs.jsx";
 import ManagersPage from "./Pages/Dedicated-Pages/Managers/ManagersPage.jsx";
 import AgentsPage from "./Pages/Dedicated-Pages/Agents/AgentsPage.jsx";
 import CustomersPage from "./Pages/Dedicated-Pages/Customers/CustomersPage.jsx";
