@@ -3,8 +3,7 @@
 }
 
 .footerInnerContainer {
-  padding-top: 3em;
-  // font-size: 0.8em;
+  padding-top: 4em;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -13,6 +12,7 @@
 .footerItemsAndLinksDivision {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 1em;
 }
 
 .footerColumns {
@@ -37,10 +37,7 @@
 
 .footerBramdName {
   font-family: "titr";
-}
-
-.footerContactListItems {
-  padding-bottom: 1em;
+  padding-bottom: 0;
 }
 
 .footerSocialNetworks {
@@ -69,7 +66,7 @@
     rgba(224, 182, 36, 1) 0%,
     rgba(147, 29, 235, 0.4626984582895658) 100%
   );
-  height: 1px;
+  height: 0.1em;
 }
 
 .footerRightsManifest {
@@ -82,39 +79,49 @@
 
 @media screen and (max-width: 1000px) {
   .footerInnerContainer {
-    // font-size: 0.5em;
+    padding-top: 3em;
+  }
+  .footerItems {
+    font-size: 0.5em;
+  }
+  .footerItemsTitles {
+    font-size: 0.8em;
+  }
+  .footerColumns {
+    flex-basis: 20%;
   }
 }
 
-@media screen and (max-width: 900px) {
-  .footerInnerContainer {
+@media screen and (max-width: 800px) {
+  .footerItems {
     font-size: 0.4em;
   }
-}
-
-@media screen and (max-width: 700px) {
-  .footerInnerContainer {
-    font-size: 0.3em;
+  .footerItemsTitles {
+    font-size: 0.6em;
   }
 }
 
 @media screen and (max-width: 500px) {
   .footerInnerContainer {
-    font-size: 0.2em;
-    // width: 80%;
+    width: 80%;
+    padding-top: 1em;
   }
-  // .footerItems {
-  //   font-size: 0.2em;
-  // }
-  
-  // .footerItemsTitles {
-    // font-size: 0.2em;
-  // }Asad
-  
+  .footerItems {
+    font-size: 0.3em;
+  }
+  .footerItemsTitles {
+    font-size: 0.4em;
+  }
+  .footerDivider {
+    height: 0.05em;
+  }
 }
 
 @media screen and (max-width: 400px) {
-  .footerInnerContainer {
-    font-size: 0.18em;
+  .footerItems {
+    font-size: 0.2em;
+  }
+  .footerItemsTitles {
+    font-size: 0.3em;
   }
 }

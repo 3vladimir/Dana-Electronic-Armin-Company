@@ -3,7 +3,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import * as React from "react"; 
+import * as React from "react";
 import "./Footer.scss";
 import brandIcon from "../../Images/logo.png";
 import eitaa from "../../Images/Icons/eitaa.png";
@@ -20,24 +20,22 @@ function App() {
           <div className="footerInnerContainer">
             <div className="footerItemsAndLinksDivision">
               <li className="footerColumns footerBrand">
-                <div className="footerBrandIcon">
-                  <img width={"60%"} src={brandIcon} alt="brandicon" />
-                </div>
-                <br />
-                <span className="footerBramdName footerItemsTitles">
-                  دانا الکترونیک آرمین
-                </span>
-                <p
-                  style={{ padding: "0" }}
-                  className="footerItems footerBrandText"
-                >
-                  شرکت دانا الکترونیک آرمین،تولید کننده ی تخصصی اتوماسیون و
-                  هوشمند سازی گلخانه،سردخانه،پرورش ماهی،مزارع و... می باشد
-                </p>
+                <ul>
+                  <li>
+                    <img width={"60%"} src={brandIcon} alt="brandicon" />
+                  </li>
+                  <li className="footerItemsTitles footerBramdName">
+                    دانا الکترونیک آرمین
+                  </li>
+                  <li className="footerItems footerBrandText">
+                    شرکت دانا الکترونیک آرمین،تولید کننده ی تخصصی اتوماسیون و
+                    هوشمند سازی گلخانه،سردخانه،پرورش ماهی،مزارع و... می باشد
+                  </li>
+                </ul>
               </li>
               <li className="footerColumns footerWithUs">
                 <ul>
-                  <li className="footerItems footerItemsTitles">همراه با ما</li>
+                  <li className="footerItemsTitles">همراه با ما</li>
                   <li className="footerItems footerLinks">
                     <Link to={"/products"}>محصولات</Link>
                   </li>
@@ -51,9 +49,7 @@ function App() {
               </li>
               <li className="footerColumns footerContactUs">
                 <ul className="footerContactList">
-                  <li className="footerItems footerItemsTitles">
-                    ارتباط با ما
-                  </li>
+                  <li className="footerItemsTitles">ارتباط با ما</li>
                   <li className="footerItems">
                     آدرس : اصفهان،نجف آباد،خیابان 15 خرداد جنوبی جنب چهار راه
                     <br />
@@ -90,9 +86,7 @@ function App() {
               </li>
               <li className="footerColumns socialNetworks">
                 <ul>
-                  <li className="footerItems footerItemsTitles">
-                    شبکه های اجتماعی
-                  </li>
+                  <li className="footerItemsTitles">شبکه های اجتماعی</li>
                   <li className="footerItems footerSocialNetworks">
                     تلگرام
                     <Link to={"http://t.me/Emh96"}>
@@ -143,7 +137,7 @@ function App() {
               </li>
             </div>
             <div className="footerDivider"></div>
-            <div className="footerRightsManifest">
+            <div className="footerItems footerRightsManifest">
               تمامی حقوق این وبسایت متعلق به شرکت دانا الکترونیک آرمین میباشد.
             </div>
           </div>
