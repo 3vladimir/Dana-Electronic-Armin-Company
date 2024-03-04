@@ -7,12 +7,15 @@ import "./SignUpCustomer.scss";
 import "../../../style/formItems.scss";
 import logo from "../../../Images/logo.png";
 import uuid from "react-uuid";
-import FormHelperText from "@mui/material/FormHelperText";
-import Snackbar from "@mui/material/Snackbar";
-import Alert from "@mui/material/Alert";
 import Title from "../../../Componnents/Title/Title";
 import handleLocalStorage from "./Local-storage/handleLocalStorage";
 import SubmitButton from "../../../Componnents/Button/SubmitButton";
+import SnackbarForFarsiInputs from "../../../Componnents/Snackabr/Snackbar";
+import InputHelperText from "../../../Componnents/InputHelperText/InputHelperText";
+import {
+  SnackbarContext,
+  SnackbarContextProvider,
+} from "../../../Contexts/ContextForSnackbar";
 
 function Main() {
   /*define refs*/
@@ -142,29 +145,13 @@ function Main() {
     }
   }
 
-  function InputHelperText({ children = "خطا", ...props }) {
-    return (
-      <FormHelperText
-        sx={{
-          textAlign: "center",
-          color: "red",
-          fontSize: "1em",
-        }}
-        {...props}
-      >
-        <span className="formAlertText">{children}</span>
-      </FormHelperText>
-    );
-  }
-
   /*snackbar*/
-  const [snackbarState, setSnackbarState] = React.useState(false);
-  function handleSnackbarStateOpen() {
-    setSnackbarState(true);
-  }
-  function handleSnackbarStateClose() {
-    setSnackbarState(false);
-  }
+  const [
+    snackbarState,
+    setSnackbarState,
+    handleSnackbarStateOpen,
+    handleSnackbarStateClose,
+  ] = React.useContext(SnackbarContext);
 
   /*form submit function*/
   function handleSubmit(event) {
@@ -207,6 +194,7 @@ function Main() {
             <img className="formLogo" src={logo} alt="logo" />
             <h1 className="formFirstTitle">بخش مشتریان</h1>
             <h2 className="formSecondTitle">ایجاد حساب کاربری</h2>
+            <SnackbarForFarsiInputs />
             <form onSubmit={handleSubmit}>
               <ul className="signUpItemsList">
                 <li className="signUpItems">
@@ -395,22 +383,6 @@ function Main() {
           </main>
         </div>
       </div>
-      <Snackbar
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        open={snackbarState}
-        onClose={handleSnackbarStateOpen}
-        key={"top-center"}
-      >
-        <Alert
-          severity="warning"
-          onClose={handleSnackbarStateClose}
-          sx={{ direction: "ltr", fontFamily: "inherit" }}
-        >
-          <spa className="formAlertText">
-            صفحه کلید را به حالت فارسی تغییر دهید
-          </spa>
-        </Alert>
-      </Snackbar>
     </>
   );
 }
@@ -418,8 +390,10 @@ function Main() {
 function App() {
   return (
     <>
-      <Title>ثبت نام مشتریان</Title>
-      <Main />
+      <SnackbarContextProvider>
+        <Title>ثبت نام مشتریان</Title>
+        <Main />
+      </SnackbarContextProvider>
     </>
   );
 }
