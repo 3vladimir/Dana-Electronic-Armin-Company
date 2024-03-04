@@ -17,10 +17,8 @@
 .headerInnerContainer {
   color: snow;
   width: 95%;
-  margin: {
-    left: auto;
-    right: auto;
-  }
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -41,18 +39,17 @@
 
 .nav {
   flex: 6 0 auto;
+}
 
-  .navList {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
+.navList {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
 
-    .navListItems:hover {
-      cursor: pointer;
-      color: rgb(247, 153, 13);
-    }
-  }
+.navListItems:hover {
+  cursor: pointer;
+  color: rgb(247, 153, 13);
 }
 
 //responsive//
