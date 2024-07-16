@@ -5,7 +5,7 @@
 }
 
 .bannerTitle {
-  font-family: shabnam-bold;  
+  font-family: shabnam-bold;
   width: 35%;
   margin: 0;
   color: white;
@@ -93,6 +93,9 @@
   .banner {
     height: 26em;
   }
+  .bannerTitle {
+    font-size: 3.8em;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -101,6 +104,9 @@
   }
   .banner {
     height: 25em;
+  }
+  .bannerTitle {
+    font-size: 3.5em;
   }
   .mainBoxes {
     padding: 3em;
@@ -112,13 +118,19 @@
 
 @media screen and (max-width: 700px) {
   .banner {
-    height: 15em;
+    height: 22em;
+  }
+  .bannerTitle {
+    font-size: 3.3em;
   }
 }
 
 @media screen and (max-width: 600px) {
   .banner {
-    height: 10em;
+    height: 18em;
+  }
+  .bannerTitle {
+    font-size: 2.5em;
   }
 }
 
@@ -130,7 +142,7 @@
     height: 13em;
   }
   .bannerTitle {
-    font-size: 1.5em;
+    font-size: 1.8em;
     transform: translate(0, 20px);
   }
   .mainBoxes {
@@ -139,5 +151,10 @@
   }
   .mainBoxesTitles {
     font-size: 0.5em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .bannerTitle {
+    font-size: 1.5em;
   }
 }

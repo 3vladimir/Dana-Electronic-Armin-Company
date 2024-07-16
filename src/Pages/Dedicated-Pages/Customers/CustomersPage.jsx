@@ -2,10 +2,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import * as React from "react";
-import { HeaderAndFooterColumnStyled } from "../../../Componnents/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
+import { HeaderAndFooterColumnStyled } from "../../../Components/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
 import "./CustomerPage.scss";
 import backgroundImage from "../../../Images/customerPageBackgound.jpg";
-import Title from "../../../Componnents/Title/Title";
+import Title from "../../../Components/Title/Title";
 
 function Main() {
   const currentCustomerPersonalInformations = window.localStorage.getItem(

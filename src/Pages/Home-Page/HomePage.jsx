@@ -3,11 +3,11 @@
 /* eslint-disable no-unused-vars */
 import * as React from "react";
 import "./HomePage.scss";
-import { HeaderAndFooterColumnStyled } from "../../Componnents/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
+import { HeaderAndFooterColumnStyled } from "../../Components/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
 import { Link } from "react-router-dom";
 import { handleLocalStoarege } from "./Local-storage/HandleLocalStorage";
 import Collapse from "@mui/material/Collapse";
-import Title from "../../Componnents/Title/Title";
+import Title from "../../Components/Title/Title";
 
 function Main() {
   handleLocalStoarege();
@@ -49,7 +49,6 @@ function Main() {
 function App() {
   return (
     <>
-    
       <Title>صفحه اصلی</Title>
       <HeaderAndFooterColumnStyled>
         <Main />

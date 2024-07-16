@@ -12,17 +12,23 @@
   padding-bottom: 1em;
 }
 
+.leftAndRightPartItemsParent {
+  margin-left: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .contactUsitems {
   display: flex;
-  width: 25%;
+  width: 10em;
   justify-content: space-between;
   align-items: center;
   font-size: large;
-  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .contactUsIcons {
-  width: 2.5em;
+  width: 2em;
   border-radius: 70px;
 }
 
@@ -35,8 +41,20 @@
   .contactUsNumbers {
     font-size: 0.7em;
   }
+  .contactUsitems{
+    width: 7em;
+  }
   .contactUsIcons {
-    width: 2em;
+    width: 1.5em;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contactUsInnerContainer,
+  .contactUsNumbers {
+    font-size: 0.5em;
+  }
+  .leftAndRightPartItemsParent{
+    margin-left: 25%;
   }
 }
 
@@ -45,7 +63,18 @@
   .contactUsNumbers {
     font-size: 0.4em;
   }
+  
+  .contactUsitems{
+    width: 3em;
+  }
   .contactUsIcons {
-    width: 1em;
+    width: 0.5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contactUsInnerContainer,
+  .contactUsNumbers {
+    font-size: 0.3em;
   }
 }

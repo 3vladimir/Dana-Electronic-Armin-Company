@@ -1,26 +1,28 @@
 @font-face {
-  font-family: 'NAZANIN';
-  src: url(./fonts/B-NAZANIN.TTF);
-}
-@font-face {
-  font-family: 'Titr';
+  font-family: "Titr";
   src: url(./fonts/B\ Titr\ Bold_0.ttf);
 }
+
 @font-face {
-  font-family: 'iranSans';
-  src: url(./fonts/Iranian\ Sans.ttf);
+  font-family: IRANsans;
+  src: url(./fonts/IRANsans.ttf);
 }
 
-li{
+@font-face {
+  font-family: shabnam-bold;
+  src: url(./fonts/Shabnam-Bold.ttf);
+}
+
+li {
   list-style-type: none;
 }
 
-ul{
+ul {
   padding: 0;
   margin: 0;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -29,15 +31,14 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   margin: 0;
-  font-family: iranSans,
-  -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: IRANsans, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased; 
-   -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

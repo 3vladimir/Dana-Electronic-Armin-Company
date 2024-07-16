@@ -3,8 +3,8 @@
 /* eslint-disable no-unused-vars */
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { HeaderAndFooterColumnStyled } from "../../../Componnents/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
-import Title from "../../../Componnents/Title/Title";
+import { HeaderAndFooterColumnStyled } from "../../../Components/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
+import Title from "../../../Components/Title/Title";
 
 function Main() {
   return (

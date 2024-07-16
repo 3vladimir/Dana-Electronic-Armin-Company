@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { HeaderAndFooterColumnStyled } from "../../../Componnents/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
+import { HeaderAndFooterColumnStyled } from "../../../Components/Header-And-Footer-column-Styled/HeaderAndFooterColumnStyled";
 import "./Articles.scss";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -12,7 +12,7 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Fade from "@mui/material/Fade";
 import uuid from "react-uuid";
-import Title from "../../../Componnents/Title/Title";
+import Title from "../../../Components/Title/Title";
 import firstArticle from "../../../articles/first.pdf";
 import secondArticle from "../../../articles/second.pdf";
 import thirdArticle from "../../../articles/third.pdf";

@@ -2,9 +2,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import * as React from "react";
-import Header from "../../../Componnents/Header/Header";
-import Footer from "../../../Componnents/Footer/Footer";
-import Title from '../../../Componnents/Title/Title'
+import Header from "../../../Components/Header/Header";
+import Footer from "../../../Components/Footer/Footer";
+import Title from '../../../Components/Title/Title'
 
 
 function Main() {

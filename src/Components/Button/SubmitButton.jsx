@@ -6,7 +6,7 @@ export default function SubmitButton({ content, ...props }) {
     <Button
       type="submit"
       variant="contained"
-      sx={{ width: "100%", fontSize: "large", fontWeight: "700" }}
+      sx={{ width: "100%",fontFamily:'inherit', fontSize: "large", fontWeight: "700" }}
       {...props}
     >
       <span className="formSubmitButtonText">{content}</span>
